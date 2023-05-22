@@ -10,7 +10,9 @@ app.get("/", (req, res) => {
 
 app.get("/students", studentDb.getAllStudent);
 app.post("/addstudent", studentDb.addStudent);
-
+app.get("/student/:id", studentDb.getStudent);
+app.put("/student/:id", studentDb.updateStudent);
+app.delete("/student/:id", studentDb.deleteStudent);
 
 
 app.listen(3000, () => {
